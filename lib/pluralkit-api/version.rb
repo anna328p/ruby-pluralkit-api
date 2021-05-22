@@ -11,5 +11,5 @@ OpenAPI Generator version: 5.2.0-SNAPSHOT
 =end
 
 module PluralKitAPI
-  VERSION = '1.0.0'
+  VERSION = '1.0.1'
 end

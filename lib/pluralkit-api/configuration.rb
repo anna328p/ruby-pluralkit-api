@@ -70,7 +70,7 @@ module PluralKitAPI
     attr_accessor :debugging
 
     # Defines the logger used for debugging.
-    # Default to `Rails.logger` (when in Rails) or logging to STDOUT.
+    # Default to logging to STDOUT.
     #
     # @return [#debug]
     attr_accessor :logger
@@ -157,7 +157,7 @@ module PluralKitAPI
       @debugging = false
       @inject_format = false
       @force_ending_format = false
-      @logger = defined?(Rails) ? Rails.logger : Logger.new(STDOUT)
+      @logger = Logger.new(STDOUT)
 
       yield(self) if block_given?
     end
